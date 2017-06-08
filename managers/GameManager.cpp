@@ -55,6 +55,7 @@ void GameManager::init() {
 void GameManager::InitRendererManager() {
 	auto bg = make_shared<SDLPng>(images.background);
 	auto bgRenderer = BackgroundRenderer{bg};
+
 	auto appleRenderer = make_shared<AppleRenderer>(images.apple, appleNode);
 	auto snakeRenderer = make_shared<SnakeRenderer>(
 			images.snakeHead, images.snakeBody, images.snakeTail,
@@ -67,6 +68,7 @@ void GameManager::InitRendererManager() {
 	auto objectRenderers = vector<shared_ptr<Renderer>>{appleRenderer, obstacleRenderer, teleporterRenderer, snakeRenderer};
 
 	rendererManager = RendererManager{bgRenderer, objectRenderers};
+	
 }
 
 /* Kicks off/is the the gameloop */
