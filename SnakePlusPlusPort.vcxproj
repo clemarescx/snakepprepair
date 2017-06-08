@@ -177,7 +177,4 @@
     <Media Include="assets\sfx\musicLoop.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\..\..\..\Emner\2. trinn\PG3300-1 16H Software Design\Visual Studio 2015\Projects\SPP\Oppgaven\packages\sdl2.2.0.5\build\native\sdl2.targets" />
-  </ImportGroup>
 </Project>
