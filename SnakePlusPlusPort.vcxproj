@@ -135,7 +135,6 @@
     <ClInclude Include="renderers\ObjectListRenderer.h" />
     <ClInclude Include="renderers\Renderer.h" />
     <ClInclude Include="renderers\SnakeRenderer.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="resourcemanagement\Timer.h" />
     <ClInclude Include="sdl\SDLBmp.h" />
     <ClInclude Include="sdl\SDLError.h" />

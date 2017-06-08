@@ -143,9 +143,6 @@
     <ClInclude Include="snake\Snake.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\gfx\Apple_v1.bmp">
