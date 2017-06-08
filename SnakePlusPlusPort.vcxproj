@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{81B6A178-28BD-4BDC-B2C0-37E2F4827D94}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(PG4400_SDL2_PATH)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(PG4400_SDL2_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="board\grid\Vector2D.cpp" />
+    <ClCompile Include="board\Node.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="managers\GameManager.cpp" />
+    <ClCompile Include="managers\InputManager.cpp" />
+    <ClCompile Include="managers\RendererManager.cpp" />
+    <ClCompile Include="renderers\AppleRenderer.cpp" />
+    <ClCompile Include="renderers\BackgroundRenderer.cpp" />
+    <ClCompile Include="renderers\ObjectListRenderer.cpp" />
+    <ClCompile Include="renderers\Renderer.cpp" />
+    <ClCompile Include="renderers\SnakeRenderer.cpp" />
+    <ClCompile Include="resourcemanagement\Timer.cpp" />
+    <ClCompile Include="sdl\SDLBmp.cpp" />
+    <ClCompile Include="sdl\SDLError.cpp" />
+    <ClCompile Include="sdl\SDLManager.cpp" />
+    <ClCompile Include="sdl\SDLMusic.cpp" />
+    <ClCompile Include="sdl\SDLPng.cpp" />
+    <ClCompile Include="sdl\SDLSound.cpp" />
+    <ClCompile Include="snake\Snake.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AssetPaths.h" />
+    <ClInclude Include="board\grid\Vector2D.h" />
+    <ClInclude Include="board\Node.h" />
+    <ClInclude Include="Direction.h" />
+    <ClInclude Include="managers\GameManager.h" />
+    <ClInclude Include="managers\InputManager.h" />
+    <ClInclude Include="managers\RendererManager.h" />
+    <ClInclude Include="renderers\AppleRenderer.h" />
+    <ClInclude Include="renderers\BackgroundRenderer.h" />
+    <ClInclude Include="renderers\ObjectListRenderer.h" />
+    <ClInclude Include="renderers\Renderer.h" />
+    <ClInclude Include="renderers\SnakeRenderer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resourcemanagement\Timer.h" />
+    <ClInclude Include="sdl\SDLBmp.h" />
+    <ClInclude Include="sdl\SDLError.h" />
+    <ClInclude Include="sdl\SDLManager.h" />
+    <ClInclude Include="sdl\SDLMath.h" />
+    <ClInclude Include="sdl\SDLMusic.h" />
+    <ClInclude Include="sdl\SDLPng.h" />
+    <ClInclude Include="sdl\SDLSound.h" />
+    <ClInclude Include="sdl\SDLWindow.h" />
+    <ClInclude Include="snake\Snake.h" />
+    <ClInclude Include="Specifications.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\gfx\Apple.png" />
+    <Image Include="assets\gfx\Apple2.png" />
+    <Image Include="assets\gfx\Apple3.png" />
+    <Image Include="assets\gfx\Apple_v1.bmp" />
+    <Image Include="assets\gfx\Hole.png" />
+    <Image Include="assets\gfx\Obstacle.png" />
+    <Image Include="assets\gfx\sdl2.bmp" />
+    <Image Include="assets\gfx\sdl_bro.bmp" />
+    <Image Include="assets\gfx\SnakeBoard.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\gfx\SnakeBody.png" />
+    <Image Include="assets\gfx\SnakeBody_v1.bmp">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\gfx\SnakeHead.png" />
+    <Image Include="assets\gfx\SnakeHead_v1.bmp" />
+    <Image Include="assets\gfx\SnakeTail.png" />
+    <Image Include="assets\gfx\treasure.bmp" />
+    <Image Include="png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\sfx\bonus.wav" />
+    <Media Include="assets\sfx\eating.wav" />
+    <Media Include="assets\sfx\grunt.wav" />
+    <Media Include="assets\sfx\musicLoop.wav" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\..\..\..\Emner\2. trinn\PG3300-1 16H Software Design\Visual Studio 2015\Projects\SPP\Oppgaven\packages\sdl2.2.0.5\build\native\sdl2.targets" />
+  </ImportGroup>
+</Project>
